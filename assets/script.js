@@ -17,10 +17,11 @@ $(document).ready(function () {
         $(`#${i}`).siblings('textarea').val(localStorage.getItem(i));
     };
 
+    // Function changes color of rows based on current hour
     function checkHour() {
-        // Military
+        // Variable to hold current houur in Military time
         const currentHour = moment().hours();
-        
+
         $("button").each(function() {
             const elementHour = $(this).attr('id');
             if (currentHour == elementHour) {
